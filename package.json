@@ -1,13 +1,14 @@
 {
   "name": "ts-playground",
   "version": "0.0.0",
-  "description": "ts-playground",
+  "description": "ts-playground is a playground of the TypeScript only myself.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "npx eslint . --ext ts",
     "lint.debug": "npx eslint . --ext ts --debug",
-    "lint.fix": "npx eslint . --ext ts --fix"
+    "lint.fix": "npx eslint . --ext ts --fix",
+    "tsc": "tsc -p .",
+    "tsn": "ts-node ./src/index.ts"
   },
   "repository": {
     "type": "git",
