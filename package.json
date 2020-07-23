@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/nemotoy/ts-playground/issues"
   },
-  "homepage": "https://github.com/nemotoy/ts-playground#readme"
+  "homepage": "https://github.com/nemotoy/ts-playground#readme",
+  "devDependencies": {
+    "@types/node": "^14.0.24",
+    "tslint": "^6.1.2",
+    "typescript": "^3.9.7"
+  }
 }
