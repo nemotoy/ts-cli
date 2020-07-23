@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "npx eslint . --ext ts",
-    "lint.debug": "npx eslint . --ext ts --debug"
+    "lint.debug": "npx eslint . --ext ts --debug",
+    "lint.fix": "npx eslint . --ext ts --fix"
   },
   "repository": {
     "type": "git",
