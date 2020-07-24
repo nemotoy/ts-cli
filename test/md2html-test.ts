@@ -15,3 +15,16 @@ it("converts Markdown to HTML (GFM=false)", () => {
 
   assert.strictEqual(md2html(sample, { gfm: false }), expected);
 });
+
+it("converts Markdown to HTML (GFM=true)", () => {
+  const sample = fs.readFileSync(
+    path.resolve(__dirname, "./fixtures/sample.md"),
+    { encoding: "utf8" }
+  );
+  const expected = fs.readFileSync(
+    path.resolve(__dirname, "./fixtures/expected-gfm.html"),
+    { encoding: "utf8" }
+  );
+
+  assert.strictEqual(md2html(sample, { gfm: true }), expected);
+});
