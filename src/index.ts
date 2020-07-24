@@ -1,6 +1,6 @@
 import commander from "commander";
 import fs from "fs";
-import marked from "marked";
+import { md2html } from "./md2html";
 
 commander.option("--gfm", "enable GFM");
 commander.parse(process.argv);
@@ -16,9 +16,6 @@ fs.readFile(filePath, { encoding: "utf8" }, (err, file) => {
     console.error(err.message);
     process.exit(1);
   }
-  const html = marked(file, {
-    gfm: cliOptions.gfm,
-  });
-
+  const html = md2html(file, cliOptions);
   console.log(html);
 });
