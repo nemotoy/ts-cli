@@ -1,5 +1,6 @@
 import commander from "commander";
 import fs from "fs";
+import marked from "marked";
 
 commander.parse(process.argv);
 
@@ -9,5 +10,6 @@ fs.readFile(filePath, { encoding: "utf8" }, (err, file) => {
     console.error(err.message);
     process.exit(1);
   }
-  console.log(file);
+  const html = marked(file);
+  console.log(html);
 });
