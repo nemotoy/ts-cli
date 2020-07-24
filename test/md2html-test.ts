@@ -13,7 +13,7 @@ it("converts Markdown to HTML (GFM=false)", () => {
     { encoding: "utf8" }
   );
 
-  assert.strictEqual(md2html(sample, { gfm: false }), expected);
+  assert.strictEqual(md2html(sample, false), expected);
 });
 
 it("converts Markdown to HTML (GFM=true)", () => {
@@ -26,5 +26,5 @@ it("converts Markdown to HTML (GFM=true)", () => {
     { encoding: "utf8" }
   );
 
-  assert.strictEqual(md2html(sample, { gfm: true }), expected);
+  assert.strictEqual(md2html(sample, true), expected);
 });
